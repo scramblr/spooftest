@@ -45,8 +45,9 @@ _RUNNING SOME OTHER WEIRD DISTRO, OR WANT TO INSTALL EVERYTHING VIA SOURCE? OK, 
 
 **# ----[ End Install Instructions ]----**
 
-**# ----[ Running The Tests To Check For IP Spoofing ]----**
-Open an SSH/Terminal session to the host #1 (The tcpdump server) and begin running tcpdump by using the following command.
+# 3.) **# ----[ Running The Tests To Check For IP Spoofing ]----**
+
+_Open an SSH/Terminal session to the host #1 (The tcpdump server) and begin running tcpdump by using the following command._
 
 ```
 **# ====[ SERVER ONE ]====**
