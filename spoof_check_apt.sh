@@ -1,5 +1,5 @@
 #!/bin/bash
-# SPOOF_CHEC TOOL
+# SPOOF_CHECK TOOL
 # released June 7 2024 by SCRAMBLR
 # v0.11a
 # https://github.com/scramblr/spooftest
