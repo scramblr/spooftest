@@ -65,25 +65,25 @@ Open another SSH/Terminal session to host #2 (The IP Spoofing Server) and run th
 
 _NOTE: Again, you must be root. Then, run:_
 ```
-server2# **scapy**
+server2# scapy
 ```
 After scapy loads, you'll paste the text below exactly, do not press enter..
 ```
-**import random
+import random
 def randomIP():
 	ip = ".".join(map(str, (random.randint(0, 255)for _ in range(4))))
 	return ip
-send(IP(src=RandIP(),dst="**
+send(IP(src=RandIP(),dst="
 ```
 After the dst=" you will paste in your tcpdump server's IP address (Server #1). Then, paste the rest of the code that follows:
 ```
-**")/ICMP()/"SPOOFTESTICMP",count=5000)**
+")/ICMP()/"SPOOFTESTICMP",count=5000)
 ```
 It should look like this if you did it right, for the 5th line:
 ```
-send(IP(src=RandIP(),dst="**5.6.7.8**")/ICMP()/"SPOOFTESTICMP",count=5000)
+send(IP(src=RandIP(),dst="5.6.7.8")/ICMP()/"SPOOFTESTICMP",count=5000)
 ```
-But instead of 5.6.7.8 it will be Server #1's IP (The tcpdump server's IP). 
+...But instead of 5.6.7.8 it will be Server #1's IP (The tcpdump server's IP). 
 
 Hit enter, and it'll send 5,000 ICMP packets that SHOULD all come from random IP addresses to your tcpdump server. If nothing comes,
 or if only one IP address shows up - chances are that your server cannot spoof IP addresses or that you (somehow) managed to screw
