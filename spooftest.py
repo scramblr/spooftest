@@ -1,6 +1,11 @@
 #!/usr/bin/python3
 #
 # spooftest.py version v1.2
+# USAGE:
+# server# chmod a+x spooftest.py
+# server# ./spooftest.py <dest server> <num of packets to send>
+#
+#
 # This is a small, simple script to test your server's abilities to spoof IPv4 packets or not.
 # You should use this instead of things like caida project's tool, because they're rumored to
 # collect data or hand it off to others who harass the server/network owners until they re-configure
