@@ -50,14 +50,15 @@ _RUNNING SOME OTHER WEIRD DISTRO, OR WANT TO INSTALL EVERYTHING VIA SOURCE? OK, 
 _Open an SSH/Terminal session to the host #1 (The tcpdump server) and begin running tcpdump by using the following command._
 
 ```
-**# ====[ SERVER ONE ]====**
-server1$ **sudo su -** _(You will need to run tcpdump as root.)_
-server1# **tcpdump -i eth0 -nnv -c 5000 icmp**
+# ====[ SERVER ONE ]====
+server1$ sudo su - (You will need to run tcpdump as root.)
+server1# tcpdump -i eth0 -nnv -c 5000 icmp
 ```
 This will run tcpdump and listen for up to 5,000 ICMP packets. You shouldn't be getting many ICMP packets until we run the next set of commands.
 
-_NOTE: If you get error "tcpdump: eth0: No such device exists" <-- You will need to find the correct name of your interface, check 'ifconfig' or ip addr.
-It's likely something similar to ens33 or ens33p1 or some other stupid name. :) Replace and try again._
+_NOTE: If you get error "tcpdump: eth0: No such device exists" <-- You will need to find the correct name of your iface._
+(Check 'ifconfig' or ip addr)
+It's likely something similar to ens33 or ens33p1 or some other stupid name. :) Replace and try again.
 
 **# ====[ SERVER TWO ]====**
 Open another SSH/Terminal session to host #2 (The IP Spoofing Server) and run the following command.
