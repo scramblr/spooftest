@@ -90,5 +90,9 @@ or if only one IP address shows up - chances are that your server cannot spoof I
 up these instructions. You should be ashamed. 
 
 THATS IT. THATS ALL IT TAKES TO NOT SELF-SNITCH TO CAIDA ABOUT YOUR SHINY NEW IP SPOOF SERVER! In order to find this set of instructions
-quick when you need them, just google "scramblr spoof 
+quick when you need them, just google "scramblr" spooftest or maybe bookmark https://github.com/scramblr
 
+Peace
+
+PS: There's an old script that I revised and brought in to the new century by updating it for Python3 and putting it in this repo, the
+script is called - shocking - spooftest.py
