@@ -13,10 +13,13 @@ Last Update: **JUNE 06 2024**
 Created By: **SCRAMBLR** _(P4CK3T H4NDL3R)_
 
 # ----[ Requirements to test for IP Spoofing ]----
-# 1.) tcpdump Server: Can be any server that is able to run tcpdump. Does not need to be able to spoof.
-# 2.) Your IP Spoof (IPHM) Server, with "scapy" or "python-scapy" installed on it.
+# 1.) tcpdump Server: Can be any server that is able to run tcpdump. 
+_*Does not need to be able to spoof._
+# 2.) Your IP Spoof (IPHM) Server
+_Have "scapy" or "python-scapy" installed on it._
 
 **----[ Setup Instructions For Both Machines ]----**
+
 _On DEBIAN, UBUNTU, OR ANY APTITUDE BASED *NIX MACHINES:_
 ```
 apt-get update
