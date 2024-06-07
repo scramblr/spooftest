@@ -24,6 +24,10 @@
 # TO DO:
 # - Remove sys calls because theyre lame
 # - Fix the code to make it less suck.
+# - Remove all references to old code which used hardcoded values.
+# - Fix up the interface and arg checks to use argparse instead of sys calls.
+# - Other misc cleanups.
+#
 #
 # Enjoy!
 # -SCRAMBLR
@@ -43,8 +47,10 @@ else:
  destination = "localhost"              # Change em via command line with this version..
  message = "HISEXYITSSPOOFTESTDOTPY"
  destx= sys.argv[1]
- numbs= sys.argv[2]
- numbi= int(sys.argv[2])
+ numbs= sys.argv[2]                     # Initalizing both string and
+ numbi= int(sys.argv[2])                # int values for use in diff places. im sure theres
+                                        # a way better way to do this but i like writing
+                                        # garbage to piss coders off lol.
 
 # Please make sure to enjoy my use of mixed SPACES and TABS. I know u love it. lmfao
 
@@ -54,17 +60,11 @@ print("Now With 100% LESS CAIDA!!")
 print("")
 print("Created by SCRAMBLR (https://github.com/scramblr)\r\n\r\n")
 print("[*] We're gonna be spoofing now!")
-#print("[*] How many packjets r we sending? [Enter For Default (666)]: ")
-#print(numba)
 print("[*] How many packjets r we sending? "+ numbs + "")
-#print("[*] Where we sending deez spiffy, spoofy bois to? [Enter For Default (localhost): ")
-#print("Default: " + destination)
 print("[*] Sending deez spiffy, spoofy pack3t boiz to: " +destx + "")
-#print("Command Line Input: "+ destx)
 print("")
 print("[*] Verifying " + destx + " still lives on the internet with ICMP ping...")
 sr1(IP(dst=destx)/ICMP()/"SCRAMBLRALIVEPING", timeout=2)
-#send(IP(dst=destx)/ICMP(),return_packets=True)
 print("")
 print("-----------------------^^^^^^")
 print("[*] Unless the above says GOT 0 ANSWERS, we're gonna execute in a sec.")
@@ -73,10 +73,8 @@ __import__("time").sleep(4)
 print("[*] Sending some spoofy packjets to da box!")
 packjet = IP(src=RandIP(),dst=destx)/ICMP()/message
 send(packjet,count=numbi)
-#send(packjet,count=howmany)
 
 __import__("time").sleep(1)
-
 
 print("[*] w00t! ok we sent " + numbs + " ICMP packjets to " + destx + " so hopefully you")
 print("[*] were running tcpdump on that server to watch for the packets. otherwise, log in to the")
@@ -85,4 +83,3 @@ print("[*] re-run this script on the spoofy server again to send the blast of pa
 print("")
 print("[*] check https://github.com/scramblr/spooftest for updates!")
 print("[*] © MMXXIV SCRAMBLR")
-
