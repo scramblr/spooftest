@@ -1,5 +1,10 @@
 # spooftest by scramblr - Test IP Spoofing IPHM Server Without Self-Snitching To Caida!
-Spooftest by SCRAMBLR is a toolkit that can check IP Spoofing IPHM Capabilities of a Server Without Snitching To Caida
+Spooftest by SCRAMBLR is a small toolkit that can check IP Spoofing IPHM Capabilities of
+your servers **WITHOUT HAVING TO SNITCH ON YOURSELF BY USING CAIDA TOOLS!**
+
+June 7 2024:
+- Added spooftest.py testing tool
+- Updated documentation
 
 Follow these simple instructions to test any server for IP Spoofing (IPHM IP Header Modification) capabilities instead of using the tool by CAIDA which
 WILL ALMOST ALWAYS CAUSE YOUR PROVIDER TO BE HARASSED UNTIL THEY SHUT SPOOFING DOWN! Don't be dumb! Use these instructions!
