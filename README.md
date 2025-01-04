@@ -2,7 +2,8 @@
 Spooftest by SCRAMBLR is a small toolkit that can check IP Spoofing IPHM Capabilities of
 your servers **WITHOUT HAVING TO SNITCH ON YOURSELF BY USING CAIDA TOOLS!**
 
-June 7 2024:
+JAN 4 2025 UPDATE
+
 - Added spooftest.py testing tool
 - Updated documentation
 
@@ -43,13 +44,15 @@ pip install scapy _or_ pip3 install scapy
 
 _RUNNING SOME OTHER WEIRD DISTRO, OR WANT TO INSTALL EVERYTHING VIA SOURCE? OK, HAVE FUN!_
 
-**# ----[ End Install Instructions ]----**
+**# ----[ End Install Instructions ]----#**
 
-# 3.) **----[ Running The Tests To Check For IP Spoofing ]----**
+# 3.) Run The Tests And See If You're Spoofing
+
+----[ Detailed Instructions To Check For IP Spoofing ]----
 
 _Open an SSH/Terminal session to the host #1 (The tcpdump server) and begin running tcpdump by using the following command._
 
-**====[ SERVER ONE ]====**
+**====[ ON SERVER ONE'S TERMINAL ]====**
 ```
 server1$ sudo su - (You will need to run tcpdump as root.)
 server1# tcpdump -i eth0 -nnv -c 5000 icmp
@@ -60,14 +63,14 @@ _NOTE: If you get error "tcpdump: eth0: No such device exists" <-- You will need
 (Check 'ifconfig' or ip addr)
 It's likely something similar to ens33 or ens33p1 or some other stupid name. :) Replace and try again.
 
-**====[ SERVER TWO ]====**
-Open another SSH/Terminal session to host #2 (The IP Spoofing Server) and run the following command.
+**====[ ON SERVER TWO'S TERMINAL ]====**
 
+Open another SSH/Terminal session to host #2 (The IP Spoofing Server) and run the following command:
 _NOTE: Again, you must be root. Then, run:_
 ```
 server2# scapy
 ```
-After scapy loads, you'll paste the text below exactly, do not press enter..
+After scapy loads, you'll paste the text below exactly, DO NOT PRESS ENTER YET...
 ```
 import random
 def randomIP():
@@ -75,7 +78,7 @@ def randomIP():
 	return ip
 send(IP(src=RandIP(),dst="
 ```
-After the dst=" you will paste in your tcpdump server's IP address (Server #1). Then, paste the rest of the code that follows:
+After the dst=" you will paste in your tcpdump server's IP address (**Server #1**). Then, paste the rest of the code that follows:
 ```
 ")/ICMP()/"SPOOFTESTICMP",count=5000)
 ```
