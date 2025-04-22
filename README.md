@@ -1,43 +1,24 @@
-# spooftest by scramblr [BEING UPDATE RIGHT NOW CHECK BACK IN 10 MINUTES]
-# This Tool Lets You Test IP Spoofing, IPHM, SPOOFABLE SERVERS, Whatever You Want To Call It....
-This tool let's you do it without SELF SNITCHING TO MIT/USA Homeland Security Also Known As..
-CAIDA! The amount of dummies that blindly trust that CAIDA is not going to use the information against
-you is astounding. ITS LITERALLY IN THEIR MISSION STATEMENT: THEY WILL HARASS AND BULLY ANY UPSTREAM LINKS
-THAT ALLOW SPOOFING TO DISALLOWING IT IF THEY EVER FIND OUT! ***STOP USING CAIDA!*** WAKE UP!
-
-Use this tool and instructions, we're going to have you up and running with a test server and everything you need 
-to test, including A FREE VPS TO SEND SPOOFED PACKETS TO. READY TO GET STARTED? LETS FUCKIN GO!!!
-
-PS: IF YOU FOUND THIS USEFUL AND HELPFUL, EMAIL ME AT spoofyboxes@cissp.eu with the provider you were able to confirm
-and I'll send you $50 finder free as long as the server provider spoofs! Not too bad of a deal, right?? 
-
-TL;DR: Spooftest by SCRAMBLR is a small toolkit that can check IP Spoofing IPHM Capabilities of
+# spooftest by scramblr - Test IP Spoofing IPHM Server Without Self-Snitching To Caida!
+Spooftest by SCRAMBLR is a small toolkit that can check IP Spoofing IPHM Capabilities of
 your servers **WITHOUT HAVING TO SNITCH ON YOURSELF BY USING CAIDA TOOLS!**
 
-APRIL 22 2025 UPDATE
+JAN 4 2025 UPDATE
 
-- Added free VPS instructions to make this 10 times easier to get done!
+- Added spooftest.py testing tool
 - Updated documentation
 
 Follow these simple instructions to test any server for IP Spoofing (IPHM IP Header Modification) capabilities instead of using the tool by CAIDA which
 WILL ALMOST ALWAYS CAUSE YOUR PROVIDER TO BE HARASSED UNTIL THEY SHUT SPOOFING DOWN! Don't be dumb! Use these instructions!
 
-Last Update: **APRIL 22 2025**
+Last Update: **JUNE 06 2024**
 Created By: **SCRAMBLR** _(P4CK3T H4NDL3R)_
 
 # ----[ Requirements to test for IP Spoofing ]----
-# 1.) tcpdump Server: ANY server that can run tcpdump. If you dont have a server, you're in luck
-because ya boy got you covered! Go to https://terminator.aeza.net/en/ and click Debian for a 
-FREE SERVER THAT LASTS 15 MINUTES! Thats plenty of time to do this test!
-_*Remember, this server DOES NOT need to be able to spoof at all._
+# 1.) tcpdump Server: ANY server that can run tcpdump. 
+_*Does not need to be able to spoof._
 
 # 2.) Your IP Spoof (IPHM) Server
-_You're going to need a few tools like scapy and a few others, these are copy/pasteable scripts you can use._
-
-**----[ Setup Instructions For RECEIVE / AEZA FREE MACHINE ]----**
-
-
-
+_Have "scapy" or "python-scapy" installed on it._
 
 **----[ Setup Instructions For Both Machines ]----**
 
